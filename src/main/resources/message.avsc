@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "Message",
+  "namespace": "com.martincastroalvarez.hadoop",
+  "fields": [
+    { "name": "timestamp", "type": "string" },
+    { "name": "text", "type": "string" },
+    { "name": "title", "type": "string" }
+  ]
+}
+
