@@ -23,6 +23,7 @@ Running Spark jobs using Docker
 - [Hadoop-spark-kafka-zookeeper docker compose](https://davideandreazzini.co.uk/hadoop-spark-kafka-zookeeper-docker-compose/)
 - [Docker Kafka Connect image for the Confluent Open Source Platform using Oracle JDK](https://github.com/MihaiBogdanEugen/docker-confluent-kafka-connect/blob/master/README.md)
 - [Configuration example for writing data to HDFS](https://docs.cloudera.com/cdp-private-cloud-base/7.1.6/kafka-connect/topics/kafka-connect-connector-hdfs-example.html)
+- [How to Use Kafka Connect](https://docs.confluent.io/kafka-connectors/self-managed/userguide.html#distributed-configuration-properties?utm_source=stackoverflow&utm_medium=rmoff&utm_campaign=ty.community.con.rmoff_stackoverflow_2020-06-23&utm_term=rmoff-devx)
 
 ## Software Architecture
 

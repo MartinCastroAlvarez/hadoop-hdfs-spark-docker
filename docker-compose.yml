@@ -149,6 +149,9 @@ services:
       CONNECT_INTERNAL_VALUE_CONVERTER: 'org.apache.kafka.connect.json.JsonConverter'
       CONNECT_HDFS_URI: 'hdfs://namenode:9870'
       CONNECT_HDFS_OUTPUT: '/my_topic_output/'
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: "1"
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: "1"
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
 
   # ----------------------------------------------------------------------------------------------------
   # In Hadoop, the NameNode is a key component of the Hadoop Distributed File System (HDFS).
