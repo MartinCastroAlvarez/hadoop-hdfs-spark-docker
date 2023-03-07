@@ -20,6 +20,9 @@ Running Spark jobs using Docker
 - [Java Kafka Consumer Producer](https://www.codeburps.com/post/java-kafka-consumer-producer)
 - [Create a Custom Exception in Java](https://www.baeldung.com/java-new-custom-exception)
 - [Getting Started (AVRO)](https://avro.apache.org/docs/1.11.1/getting-started-java/)
+- [Hadoop-spark-kafka-zookeeper docker compose](https://davideandreazzini.co.uk/hadoop-spark-kafka-zookeeper-docker-compose/)
+- [Docker Kafka Connect image for the Confluent Open Source Platform using Oracle JDK](https://github.com/MihaiBogdanEugen/docker-confluent-kafka-connect/blob/master/README.md)
+- [Configuration example for writing data to HDFS](https://docs.cloudera.com/cdp-private-cloud-base/7.1.6/kafka-connect/topics/kafka-connect-connector-hdfs-example.html)
 
 ## Software Architecture
 
@@ -55,11 +58,6 @@ ec544695c49a        bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8       "/e
 ca5186635150        bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /r..."   12 hours ago        Up 56 seconds (healthy)   0.0.0.0:9000->9000/tcp, 0.0.0.0:9870->9870/tcp   namenode
 beed8502828c        bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /r..."   12 hours ago        Up 55 seconds (healthy)   0.0.0.0:9865->9864/tcp                           datenode2
 ```
-
-#### Checking the status of the NameNode at [http://127.0.0.1:9870/dfshealth.html](http://127.0.0.1:9870/dfshealth.html)
-
-![status1.png](status1.png)
-![status2.png](status2.png)
 
 ### Interacting with HDFS
 
@@ -123,6 +121,11 @@ hdfs dfs -cat /user/hadoop.txt
 lorem
 ```
 
+#### Checking the status of the NameNode at [http://127.0.0.1:9870/dfshealth.html](http://127.0.0.1:9870/dfshealth.html)
+
+![status1.png](status1.png)
+![status2.png](status2.png)
+
 ### Interacting with Kafka
 
 Kafka is an open-source distributed event streaming platform designed for handling real-time
@@ -141,7 +144,7 @@ and plays a crucial role in the world of real-time data processing.
 
 ![kafka.jpeg](kafka.jpeg)
 
-### Sending message to Kafka
+### Using a producer to send messages to Kafka
 
 ```bash
 clear; mvn compile exec:java -Dexec.mainClass="com.martincastroalvarez.hadoop.Producer" -Dhost="127.0.0.1" -Dport=9092 -Dtopic="my_topic" -Dmessage="lorem ipsum dolor" -Dtitle="Lorem Ipsum"
@@ -153,4 +156,3 @@ clear; mvn compile exec:java -Dexec.mainClass="com.martincastroalvarez.hadoop.Pr
 403 [com.martincastroalvarez.hadoop.Producer.main()] DEBUG org.apache.kafka.clients.producer.KafkaProducer  - [Producer clientId=producer-1] Kafka producer has been closed
 403 [com.martincastroalvarez.hadoop.Producer.main()] INFO com.martincastroalvarez.hadoop.Producer  - Message sent successfuly!
 ```
-
